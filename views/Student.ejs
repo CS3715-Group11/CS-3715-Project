@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="stylesheets/Milmore.css">
+	<link rel='stylesheet' media='screen and (min-width: 1081px) and (max-width: 1200px)' href='stylesheets/MilmoreTablet.css' />
+	<link rel='stylesheet' media='screen and (min-width: 1px) and (max-width: 1080px)' href='stylesheets/MilmoreMobile.css' />
+	<link rel="stylesheet" type="text/css" href="stylesheets/Main.css">
+	<title>Student Page</title>
+	
+	<style>
+			body {
+    			background: url("images/BlexField5.jpg") repeat scroll 0 0 transparent;
+				background-size: cover;
+			}
+		</style>
+	
+</head>
+<script>
+	function register() {
+			var course = document.getElementById("course");
+			var c = course.options[course.selectedIndex].text;
+			var section = document.getElementById("section");
+			var s = section.options[section.selectedIndex].value;
+			var student = document.getElementById("student");
+			var st = student.options[student.selectedIndex].value;
+			alert(st+" has successfully registered for "+c+", "+s+".");
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,4)=='milm'){
+					var temp=JSON.parse(localStorage.getItem(z));
+					if (temp[1]==c){
+						var x=localStorage.length;
+						var temp2=[temp [0], temp [1], temp[2]];
+						if(st.substring(0,9) == 'Student_A'){
+							localStorage.setItem('st1'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_B'){
+							localStorage.setItem('st2'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_C'){
+							localStorage.setItem('st3'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_D'){
+							localStorage.setItem('st4'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_E'){
+							localStorage.setItem('st5'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_F'){
+							localStorage.setItem('st6'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_G'){
+							localStorage.setItem('st7'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_H'){
+							localStorage.setItem('st8'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_I'){
+							localStorage.setItem('st9'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_J'){
+							localStorage.setItem('st0'+x, JSON.stringify(temp2));
+						}
+					}
+				}
+				if(z.substring(0,4)=='blex'){
+					var temp=JSON.parse(localStorage.getItem(z));
+					if (temp[1]==c){
+						var x=localStorage.length;
+						var temp2=[temp [0], temp [1], temp[2]];
+						if(st.substring(0,9) == 'Student_A'){
+							localStorage.setItem('st1'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_B'){
+							localStorage.setItem('st2'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_C'){
+							localStorage.setItem('st3'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_D'){
+							localStorage.setItem('st4'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_E'){
+							localStorage.setItem('st5'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_F'){
+							localStorage.setItem('st6'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_G'){
+							localStorage.setItem('st7'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_H'){
+							localStorage.setItem('st8'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_I'){
+							localStorage.setItem('st9'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_J'){
+							localStorage.setItem('st0'+x, JSON.stringify(temp2));
+						}
+					}
+				}
+			}			
+	}
+
+
+
+	function init(){
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,3)=='st1' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td></tr>";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,3)=='st2' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table2");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td></tr>";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,3)=='st3' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table3");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td></tr>";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,3)=='st4' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table4");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td></tr>";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,3)=='st5' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table5");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td></tr>";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,3)=='st6' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table6");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td></tr>";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,3)=='st7' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table7");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td></tr>";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,3)=='st8' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table8");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td></tr>";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,3)=='st9' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table9");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td></tr>";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,3)=='st0' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table10");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td></tr>";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+					var z = localStorage.key(i);
+					if(z.substring(0,4)=='milm' || 'blex' ){
+						var temp=JSON.parse(localStorage.getItem(z));
+						var x = document.getElementById('course');
+						var option = document.createElement('option');
+						option.text = temp [1];
+						x.add(option);
+				}
+			}
+			
+	}
+			
+	
+	
+	
+</script>
+
+<body onload="init();">
+
+<div class="boxed">	
+  		<h1 class="title2">Student Page</h1>
+  		<a href="/">
+	 		<img src="images/UniversityLogo.jpg" style="width:15%;">
+  		</a>
+		<h3 class = "info"> Address: 249 Elizabeth Avenue<br/> Phone: +1(709)200-3543</h3>
+</div>
+
+		<a href="/"><h1 class="bar"> Main </h1></a>
+		<a href="/BlexfieldCampus"><h1 class="bar"> Blexfield </h1></a>
+		<a href="/MilmoreCampus"><h1 class="bar"> Milmore </h1></a>
+		<a href="/PreviousCourses"><h1 class="bar"> Previous Courses </h1></a>
+		<a href="/Student"><h1 class="bar"> Student</h1></a>
+	
+<h1 class="main"> Student 1 </h1>
+
+<table style="width: 100%" id="data_table">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+</tbody></table>
+<h1 class="main"> Student 2 </h1>
+
+<table style="width: 100%" id="data_table2">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+</tbody></table>
+<h1 class="main"> Student 3 </h1>
+
+<table style="width: 100%" id="data_table3">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+</tbody></table>
+<h1 class="main"> Student 4 </h1>
+
+<table style="width: 100%" id="data_table4">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+</tbody></table>
+<h1 class="main"> Student 5 </h1>
+
+<table style="width: 100%" id="data_table5">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+</tbody></table>
+<h1 class="main"> Student 6 </h1>
+
+<table style="width: 100%" id="data_table6">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+</tbody></table>
+<h1 class="main"> Student 7 </h1>
+
+<table style="width: 100%" id="data_table7">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+</tbody></table>
+<h1 class="main"> Student 8 </h1>
+
+<table style="width: 100%" id="data_table8">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+</tbody></table>
+<h1 class="main"> Student 9 </h1>
+
+<table style="width: 100%" id="data_table9">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+</tbody></table>
+<h1 class="main"> Student 10 </h1>
+
+<table style="width: 100%" id="data_table10">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+</tbody></table>
+
+
+
+<h1 class="main">Register for a course</h1>
+<div class="select">
+
+	<select id="course">
+	</select>
+	<select id="section">
+		<option value="Section 1">Section 1</option>
+		<option value="Section 2">Section 2</option>
+		<option value="Section 3">Section 3</option>
+	</select>
+	
+	<select id="student">
+		<option value="Student_A">Student 1</option>
+		<option value="Student_B">Student 2</option>
+		<option value="Student_C">Student 3</option>
+		<option value="Student_D">Student 4</option>
+		<option value="Student_E">Student 5</option>
+		<option value="Student_F">Student 6</option>
+		<option value="Student_G">Student 7</option>
+		<option value="Student_H:">Student 8</option>
+		<option value="Student_I:">Student 9</option>
+		<option value="Student_J:">Student 10</option>
+	</select>
+	
+	<button id="register" onclick="register()">Register</button>
+  
+</div>
+
+
+	<div class="footer">
+			<h3><center>Copyright @ 2017 Federal University of Newfoundland.</center></h3>
+	</div>
+</body>
+</html>

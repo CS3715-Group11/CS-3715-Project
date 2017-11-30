@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="stylesheets/Main.css">
+		<link rel='stylesheet' media='screen and (min-width: 1081px) and (max-width: 1200px)' href='stylesheets/MainTablet.css' />
+		<link rel='stylesheet' media='screen and (min-width: 1px) and (max-width: 1080px)' href='stylesheets/MainMobile.css' />
+		
+		<style>
+			body {
+    			background: url("images/BlexField5.jpg") repeat scroll 0 0 transparent;
+				background-size: cover;
+			}
+		</style>
+		
+		<title>FUN UNIVERSITY</title> 
+
+		<script>
+		
+				function newEvent() {
+					var da = document.getElementById('day');
+					var d = da.options[da.selectedIndex].value;
+					var ul = document.getElementById(d);
+					var eventInput = document.getElementById('newEvent');
+					var li = document.createElement('li');
+					li.setAttribute('id',eventInput.value);
+					li.appendChild(document.createTextNode(eventInput.value));
+					ul.appendChild(li);
+					var x= localStorage.length;
+					localStorage.setItem(d+x, eventInput.value);
+				}
+			
+				function edit_info1(){
+					var text=document.getElementById('i1_1');
+					var t=text.value;
+				    i1.innerHTML=t;
+					localStorage.setItem('minfo',t);
+					
+				
+				}
+					
+				function edit_info2(){
+					var text=document.getElementById('i2_2');
+					var t=text.value;
+					i2.innerHTML=t;
+					localStorage.setItem('minfo',t);
+				}
+				function init(){
+					
+					if(localStorage.getItem('minfo')!=null){		
+						i1.innerHTML=localStorage.getItem('binfo');
+					}
+					
+					if(localStorage.getItem('minfo')!=null){		
+						i2.innerHTML=localStorage.getItem('minfo');
+					}
+					for(var i =0; i<localStorage.length; i++){
+						var z = localStorage.key(i);
+						if(z.substring(0,6)=='monday' ){
+							var ul = document.getElementById('monday');
+							var y= localStorage.getItem(z);
+							var li = document.createElement('li');
+							li.setAttribute('id',y);
+							li.appendChild(document.createTextNode(y));
+							ul.appendChild(li);
+						}
+						if(z.substring(0,7)=='tuesday' ){
+							var ul = document.getElementById('tuesday');
+							var y= localStorage.getItem(z);
+							var li = document.createElement('li');
+							li.setAttribute('id',y);
+							li.appendChild(document.createTextNode(y));
+							ul.appendChild(li);
+						}
+						if(z.substring(0,9)=='wednesday' ){
+							var ul = document.getElementById('wednesday');
+							var y= localStorage.getItem(z);
+							var li = document.createElement('li');
+							li.setAttribute('id',y);
+							li.appendChild(document.createTextNode(y));
+							ul.appendChild(li);
+						}
+						if(z.substring(0,8)=='thursday' ){
+							var ul = document.getElementById('thursday');
+							var y= localStorage.getItem(z);
+							var li = document.createElement('li');
+							li.setAttribute('id',y);
+							li.appendChild(document.createTextNode(y));
+							ul.appendChild(li);
+						}
+						if(z.substring(0,6)=='friday' ){
+							var ul = document.getElementById('friday');
+							var y= localStorage.getItem(z);
+							var li = document.createElement('li');
+							li.setAttribute('id',y);
+							li.appendChild(document.createTextNode(y));
+							ul.appendChild(li);
+						}
+						if(z.substring(0,8)=='saturday' ){
+							var ul = document.getElementById('saturday');
+							var y= localStorage.getItem(z);
+							var li = document.createElement('li');
+							li.setAttribute('id',y);
+							li.appendChild(document.createTextNode(y));
+							ul.appendChild(li);
+						}
+						if(z.substring(0,6)=='sunday' ){
+							var ul = document.getElementById('sunday');
+							var y= localStorage.getItem(z);
+							var li = document.createElement('li');
+							li.setAttribute('id',y);
+							li.appendChild(document.createTextNode(y));
+							ul.appendChild(li);
+						}
+					}
+					
+					
+				
+					
+					
+				}
+           </script>
+				
+		
+	</head>
+	<body onload="init();">
+	<div id="content" class="row rounded">
+		<div class="boxed">
+  			<h2><center>Welcome to Our University</center></h2>
+  			<a href="">
+	 			<img src="images/UniversityLogo.jpg" style="width:15%;">
+  			</a>
+  			<h3 class = "info"> Address: 249 Elizabeth Avenue<br/> Phone: +1(709)200-3543</h3>
+		</div>
+		
+		<a href=""><h1 class="bar"> Main </h1></a>
+		<a href="/BlexfieldCampus"><h1 class="bar"> Blexfield </h1></a>
+		<a href="/MilmoreCampus"><h1 class="bar"> Milmore </h1></a>
+		<a href="/PreviousCourses"><h1 class="bar"> Previous Courses </h1></a>
+		<a href="/Student"><h1 class="bar"> Student</h1></a>
+		
+		<div id="section" class="rounded">
+			<div class= "bone">
+				<blockquote><h2 class="events">Events</h2></blockquote>
+				<ul>
+					<li><h2>Monday</h2></li>
+					<ul type="circle" id='monday'>
+						<li>Guest Lecture by Einstein</li>
+						<li>Basketball Game</li>
+					</ul>
+					<li><h2>Tuesday</h2></li>
+					<ul type="circle" id='tuesday'>
+						<li>Web Programming Course</li>
+						<li>Ice Caps Hockey Game</li>
+						<li>FUN vs MUN Soccer Game</li>
+					</ul>
+					<li><h2>Wednesday</h2></li>
+					<ul type="circle" id='wednesday'>
+						<li>First Aid Training Event</li>
+						<li>Scotiabank Giveaway</li>
+						<li>Blood Donation Event</li>
+						<li>Free Pizza Give Away</li>
+					</ul>
+					<li><h2>Thursday</h2></l1>
+					<ul type="circle" id='thursday'>
+						<li>Avalon Mall Special Event</li>
+						<li>Seminar with Dr. Ashoke</li>
+						<li>Work Term Seminar</li>
+					</ul>
+					<li><h2>Friday</h2></l1>
+					<ul type="circle" id='friday'>
+						<li>Meeting with Professor Fiech</li>
+						<li>MUN CS Association Meeting</li>
+					</ul>
+					<li><h2>Saturday</h2></l1>
+					<ul type="circle" id='saturday'>
+					<li>Toronto Maple Leafs Hockey Game</li>
+					</ul>
+					<li><h2>Sunday</h2></l1>
+					<ul type="circle" id='sunday'>
+					</ul>
+				</ul>
+				
+				
+				<h2>Add Event</h2>
+				<input id='newEvent' type='text'>
+				<select id="day">
+					<option value="monday">Monday</option>
+					<option value="tuesday">Tuesday</option>
+					<option value="wednesday">Wednesday</option>
+					<option value="thursday">Thursday</option>
+					<option value="friday">Friday</option>
+					<option value="saturday">Saturday</option>
+					<option value="sunday">Sunday</option>
+				</select>
+				<button id='addEventButton' onclick="newEvent()">Add</button>
+				
+			</div>
+			<div class="sectionBody">
+				<div class="title">
+					<h1 class="title1">Our Campuses</h1>
+				
+				</div>
+				
+				<div class ="body">
+					<a href="/BlexfieldCampus">
+						<h2 class="left">Blexfield Campus</h2>
+					</a>
+
+					<div class="bqinfo"><blockquote id ="i1" class="info1"> Information about Blexfield campus.</blockquote></div>
+					<input class='newInfo1' id='i1_1' type='text'>
+					<input type="button" id="edit_button1" value="Edit" class="newInfo1" onclick="edit_info1()">
+				</div>
+				
+				<div class ="body">
+					<a href="/MilmoreCampus">
+						<h2 class="right">Milmore Campus</h2>
+					</a>
+					<blockquote class="info2" id="i2"> Information about Milmore campus.
+					</blockquote>
+					<input class='newInfo2' id='i2_2' type='text'>
+					<input type="button" id="edit_button2" value="Edit" class="newInfo2" onclick="edit_info2()">
+				</div>
+				
+				<div class ="body">
+					<a href="/About">
+						<h2 class="left">About Federal</h2>
+					</a>
+					<blockquote class="info1">About Federal University of Newfoundland</blockquote>
+				</div>
+				
+			</div>
+		</div>
+		<div class="footer">
+			<h3><center>Copyright @ 2017 Federal University of Newfoundland.</center></h3>
+		</div>
+	</div>
+	</body>
+</html>

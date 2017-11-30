@@ -1,0 +1,134 @@
+@charset "UTF-8";
+.boxed{
+	background-color: #2BC410;
+}
+.header{
+  	border: 3px double #333333;
+  	border-radius: 10px;
+  	PADDING-LEFT: 3%;
+  	PADDING-BOTTOM: 3%;
+  	background-color: #2BC410;
+  	margin-bottom: 5px;
+	width:96.4%;
+}
+.info{
+	float:right;
+	PADDING-RIGHT: 20px;
+  	PADDING-BOTTOM: 20px;
+}
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+tr:nth-child(even){
+	background-color: #0be4e9;
+}
+tr:nth-child(odd){
+	background-color: #8981ff;
+}
+th{
+	background-color: black;
+    color: white;
+}
+
+.footer{
+	background-color: #F9ECEC;
+	border: 3px solid black;
+	border-radius: 10px;
+	margin-top: 30px;
+	clear: both;
+}
+
+h1.main{
+	color: black;
+	border: 4px solid black;
+	border-radius: 10px;
+	background-color: #B0B0B0;
+	width: 40%;
+	font-size: 3.5vw;
+	text-align: center;
+}
+
+select{
+	width: 20%;
+	font-size:3vw;
+	margin-right: 5%;
+	border: 1.5px double black;
+}
+button{
+	width: 20%;
+	font-size:3vw;
+	background-color: #FF9B70;
+	margin-right: 5%;
+	border: 1.5px double black;
+}
+
+h1 {
+    color: white;
+	background: grey;
+	font-size: 250%;
+	display:table;
+    width:100%;
+	margin-bottom: 5px;
+	border: 5px solid black;
+}
+
+h1.title2 {
+	color: black;
+	background: transparent;
+	font-size: 250%;
+	display:table;
+    width:100%;
+	border: 0px;
+	text-align: center;
+}
+
+h2 {
+	color: black;
+	font-size: 175%;
+	background: grey;
+	width: 250px;
+	border: 5px solid black;
+}
+blockquote, p{
+	background: white;
+	font-size:150;
+	border: 3px groove black;
+}
+
+.select{
+	background-color: #E8E8E8;
+	border: 2px dashed black;
+	border-radius: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-top: 10px;
+	text-align: center;
+}
+h1.bar{
+	color: blue;
+	background: white;
+	font-size: 150%;
+	float: left;
+	width: 18%;
+	text-align: center;
+	margin-bottom: 5px;
+	border: 5px solid black;
+}
+
+.register{
+	
+	margin-top: 10px;
+	padding-top: 10px;
+	
+}
+

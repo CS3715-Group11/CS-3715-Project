@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="stylesheets/Milmore.css">
+	<link rel='stylesheet' media='screen and (min-width: 1081px) and (max-width: 1200px)' href='stylesheets/MilmoreTablet.css' />
+	<link rel='stylesheet' media='screen and (min-width: 1px) and (max-width: 1080px)' href='stylesheets/MilmoreMobile.css' />
+	<link rel="stylesheet" type="text/css" href="stylesheets/Main.css">
+	<title>Previous Courses</title>
+	
+	<style>
+			body {
+    			background: url("images/BlexField5.jpg") repeat scroll 0 0 transparent;
+				background-size: cover;
+			}
+	</style>
+	
+</head>
+<script>
+	function init(){
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,4)=='dele' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					var table=document.getElementById("data_table");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td><td id='date_row"+table_len+"'>"+temp [3]+"</td></tr>";
+					
+				}	
+			}
+	}
+			
+	
+	
+</script>
+
+<body onload="init();">
+
+<div class="boxed">	
+  		<h1 class="title2">Previous Courses</h1>
+  		<a href="/">
+	 		<img src="images/UniversityLogo.jpg" style="width:15%;">
+  		</a>
+		<h3 class = "info"> Address: 249 Elizabeth Avenue<br/> Phone: +1(709)200-3543</h3>
+</div>
+
+		<a href="/"><h1 class="bar"> Main </h1></a>
+		<a href="/BlexfieldCampus"><h1 class="bar"> Blexfield </h1></a>
+		<a href="/MilmoreCampus"><h1 class="bar"> Milmore </h1></a>
+		<a href="/PreviousCourses"><h1 class="bar"> Previous Courses </h1></a>
+		<a href="/Student"><h1 class="bar"> Student</h1></a>
+	
+<h1 class="main"> Discontinued Courses </h1>
+
+<table style="width: 100%" id="data_table">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+		<th>Date Deleted</th>
+  </tr>
+</tbody></table>
+
+
+	<div class="footer">
+			<h3><center>Copyright @ 2017 Federal University of Newfoundland.</center></h3>
+	</div>
+</body>
+</html>

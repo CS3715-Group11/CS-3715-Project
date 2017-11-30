@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="stylesheets/Milmore.css">
+	<link rel='stylesheet' media='screen and (min-width: 1081px) and (max-width: 1200px)' href='stylesheets/MilmoreTablet.css' />
+	<link rel='stylesheet' media='screen and (min-width: 1px) and (max-width: 1080px)' href='stylesheets/MilmoreMobile.css' />
+	<title>Courses</title>
+	
+	<style>
+			body {
+    			background: url("images/BlexField5.jpg") repeat scroll 0 0 transparent;
+				background-size: cover;
+			}
+	</style>
+	
+	<script type="text/javascript">
+
+
+		function delete_row(no)
+		{
+			var date= new Date();
+			var new_name=document.getElementById("name_row"+no);
+			var new_number=document.getElementById("number_row"+no);
+			var new_room=document.getElementById("room_row"+no);
+			var temp=[new_name.innerHTML, new_number.innerHTML, new_room.innerHTML, date]; 
+			var x= localStorage.length;
+			localStorage.setItem('delete'+x, JSON.stringify(temp));
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,4)=='milm' ){
+					var temp2=JSON.parse(localStorage.getItem(z));
+					if(temp2 [0] == new_name.innerHTML && temp2 [1] == new_number.innerHTML && temp2 [2] == new_room.innerHTML){
+						localStorage.removeItem(z);
+					}
+				}
+			}
+			document.getElementById("row"+no+"").outerHTML="";
+		}
+		function add_row()
+		{
+			var table=document.getElementById("data_table");
+			var table_len=(table.rows.length)-1;
+			
+			var new_name=document.getElementById("new_name").value;
+			var new_number=document.getElementById("new_number").value;
+			var new_room=document.getElementById("new_room").value;
+			var temp=[new_name, new_number, new_room];
+			var x= localStorage.length;
+			localStorage.setItem('milm'+x, JSON.stringify(temp));
+	
+			var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='number_row"+table_len+"'>"+new_number+"</td><td id='room_row"+table_len+"'>"+new_room+"</td><td><input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+
+			var x = document.getElementById('course');
+			var option = document.createElement('option');
+			option.text = new_number;
+			x.add(option);
+			
+			document.getElementById("new_name").value="";
+			document.getElementById("new_number").value="";
+			document.getElementById("new_room").value="";
+		}
+		
+		function register() {
+			
+			var course = document.getElementById("course");
+			var c = course.options[course.selectedIndex].text;
+			var section = document.getElementById("section");
+			var s = section.options[section.selectedIndex].value;
+			var student = document.getElementById("student");
+			var st = student.options[student.selectedIndex].value;
+			alert(st+" has successfully registered for "+c+", "+s+".");
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,4)=='milm' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					if (temp[1]==c){
+						var x=localStorage.length;
+						var temp2=[temp [0], temp [1], temp[2]];
+						if(st.substring(0,9) == 'Student_A'){
+							localStorage.setItem('st1'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_B'){
+							localStorage.setItem('st2'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_C'){
+							localStorage.setItem('st3'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_D'){
+							localStorage.setItem('st4'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_E'){
+							localStorage.setItem('st5'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_F'){
+							localStorage.setItem('st6'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_G'){
+							localStorage.setItem('st7'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_H'){
+							localStorage.setItem('st8'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_I'){
+							localStorage.setItem('st9'+x, JSON.stringify(temp2));
+						}
+						if(st.substring(0,9) == 'Student_J'){
+							localStorage.setItem('st0'+x, JSON.stringify(temp2));
+						}
+					}
+				}
+			}
+						
+		}
+		
+		
+		function init(){
+			for(var i =0; i<localStorage.length; i++){
+				var z = localStorage.key(i);
+				if(z.substring(0,4)=='milm' ){
+					var temp=JSON.parse(localStorage.getItem(z));
+					document.getElementById("new_name").value=temp [0];
+					document.getElementById("new_number").value=temp [1];
+					document.getElementById("new_room").value=temp [2];
+					var table=document.getElementById("data_table");
+					var table_len=(table.rows.length)-1;
+					var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+temp [0]+"</td><td id='number_row"+table_len+"'>"+temp [1]+"</td><td id='room_row"+table_len+"'>"+temp [2]+"</td><td><input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+					document.getElementById("new_name").value="";
+					document.getElementById("new_number").value="";
+					document.getElementById("new_room").value="";
+					
+				}	
+			}
+			
+			for(var i =0; i<localStorage.length; i++){
+					var z = localStorage.key(i);
+					if(z.substring(0,4)=='milm' ){
+						var temp=JSON.parse(localStorage.getItem(z));
+						var x = document.getElementById('course');
+						var option = document.createElement('option');
+						option.text = temp [1];
+						x.add(option);
+					}
+				}
+			
+		}
+		
+	</script>
+	
+</head>
+
+<body onload="init();">
+
+<div class="header">	
+  		<h1 class="title2">Milmore Campus</h1>
+  		<a href="/">
+	 		<img src="images/UniversityLogo.jpg" style="width:15%;">
+  		</a>
+</div>
+
+		<a href="/"><h1 class="bar"> Main </h1></a>
+		<a href="/BlexfieldCampus"><h1 class="bar"> Blexfield </h1></a>
+		<a href="/MilmoreCampus"><h1 class="bar"> Milmore </h1></a>
+		<a href="/PreviousCourses"><h1 class="bar"> Previous Courses </h1></a>
+		<a href="/Student"><h1 class="bar"> Student</h1></a>
+
+<h1 class="main"> Course Catalog </h1>
+<table style="width: 100%" id="data_table">
+	<tbody><tr>
+		<th>Course Name</th>
+		<th>Course Number</th> 
+		<th>Room</th>
+  </tr>
+
+	<tr>
+		<td><input type="text" id="new_name"></td>
+		<td><input type="text" id="new_number"></td>
+		<td><input type="text" id="new_room"></td>
+		<td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+	</tr>
+</tbody></table>
+
+
+<h1 class="main">Register for a course</h1>
+<div class="select">
+
+	<select id="course">
+	</select>
+	<select id="section">
+		<option value="Section 1">Section 1</option>
+		<option value="Section 2">Section 2</option>
+		<option value="Section 3">Section 3</option>
+	</select>
+	
+	<select id="student">
+		<option value="Student_A">Student 1</option>
+		<option value="Student_B">Student 2</option>
+		<option value="Student_C">Student 3</option>
+		<option value="Student_D">Student 4</option>
+		<option value="Student_E">Student 5</option>
+		<option value="Student_F">Student 6</option>
+		<option value="Student_G">Student 7</option>
+		<option value="Student_H:">Student 8</option>
+		<option value="Student_I:">Student 9</option>
+		<option value="Student_J:">Student 10</option>
+	</select>
+	
+	<button id="register" onclick="register()">Register</button>
+  
+</div>
+
+<div class="footer">
+			<h3><center>Copyright @ 2017 Federal University of Newfoundland.</center></h3>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+body{
+	 background: url("../Pictures/Milmore3.jpg") repeat scroll 0 0 transparent;
+	 background-size: cover;
+	 font-family: Arial;
+	 font-style: oblique;
+}
+
+.body{
+	background-color: #7AE7FF;
+}
+
+.footer{
+	background-color: #F7E0C6;
+}

@@ -1,0 +1,119 @@
+Express server listening on port 3341
+test
+[90mGET / [32m200 [90m34ms - 7.36kb[0m
+[90mGET /stylesheets/Main.css [36m304 [90m11ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m3ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m1ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET / [36m304 [90m4ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m1ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m1ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET / [36m304 [90m2ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m0ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m1ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m1ms[0m
+[90mGET / [36m304 [90m2ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m1ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m0ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m1ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m0ms[0m
+[90mGET / [36m304 [90m3ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m1ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m1ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET / [36m304 [90m1ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m0ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m0ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m1ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET / [36m304 [90m102ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m0ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m1ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET / [36m304 [90m2ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m1ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m0ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m1ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m0ms[0m
+[90mGET / [36m304 [90m1ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m0ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m0ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m0ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m0ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m0ms[0m
+[90mGET / [32m200 [90m2ms - 7.36kb[0m
+[90mGET /stylesheets/Main.css [32m200 [90m6ms - 2.57kb[0m
+[90mGET /images/UniversityLogo.jpg [32m200 [90m4ms - 11.86kb[0m
+[90mGET /stylesheets/MainTablet.css [32m200 [90m3ms - 241b[0m
+[90mGET /stylesheets/MainMobile.css [32m200 [90m2ms - 233b[0m
+[90mGET /images/BlexField5.jpg [32m200 [90m3ms - 40.45kb[0m
+[90mGET / [36m304 [90m1ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m1ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m0ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m2ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m1ms[0m
+[90mGET / [36m304 [90m1ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m1ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m0ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m1ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m0ms[0m
+[90mGET /BlexfieldCampus [32m200 [90m5ms - 3.14kb[0m
+[90mGET /stylesheets/Main.css [36m304 [90m102ms[0m
+[90mGET /stylesheets/Blexfield.css [32m200 [90m105ms - 1.93kb[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m2ms[0m
+[90mGET /images/BlexField3.jpg [32m200 [90m3ms - 101.07kb[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m0ms[0m
+[90mGET /images/BlexfieldMap2.jpg [32m200 [90m5ms - 235.08kb[0m
+[90mGET /images/BlexField6.jpg [32m200 [90m3ms - 10.38kb[0m
+[90mGET /images/BlexField8.jpg [32m200 [90m6ms - 206.64kb[0m
+[90mGET /images/BlexField9.jpg [32m200 [90m5ms - 172.22kb[0m
+[90mGET /images/BlexField11.jpg [32m200 [90m111ms - 267.29kb[0m
+[90mGET /images/BlexField14.jpg [32m200 [90m5ms - 46.59kb[0m
+[90mGET /images/BlexField13.jpg [32m200 [90m8ms - 310.95kb[0m
+[90mGET /images/BlexField12.jpg [32m200 [90m8ms - 317.91kb[0m
+[90mGET /images/BlexField15.jpg [32m200 [90m3ms - 61.26kb[0m
+[90mGET /images/BlexField16.jpg [32m200 [90m107ms - 255.55kb[0m
+[90mGET /stylesheets/BlexfieldMobile.css [32m200 [90m4ms - 273b[0m
+[90mGET /images/BlexField10.jpg [32m200 [90m4ms - 45.15kb[0m
+[90mGET /stylesheets/BlexfieldTablet.css [32m200 [90m5ms - 282b[0m
+[90mGET /images/BlexField7.jpg [32m200 [90m4ms - 38.61kb[0m
+[90mGET /BlexfieldCourses [32m200 [90m5ms - 7.57kb[0m
+[90mGET /stylesheets/Blexfield.css [36m304 [90m0ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m1ms[0m
+[90mGET /stylesheets/BlexfieldTablet.css [36m304 [90m0ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m2ms[0m
+[90mGET /stylesheets/BlexfieldMobile.css [36m304 [90m1ms[0m
+[90mGET /Student [32m200 [90m4ms - 12.45kb[0m
+[90mGET /stylesheets/Main.css [36m304 [90m0ms[0m
+[90mGET /stylesheets/Milmore.css [32m200 [90m4ms - 1.87kb[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m0ms[0m
+[90mGET /stylesheets/MilmoreTablet.css [32m200 [90m3ms - 280b[0m
+[90mGET /stylesheets/MilmoreMobile.css [32m200 [90m4ms - 272b[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET / [36m304 [90m1ms[0m
+[90mGET /stylesheets/Main.css [36m304 [90m0ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m0ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m1ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m1ms[0m
+[90mGET / [32m200 [90m109ms - 7.36kb[0m
+[90mGET /stylesheets/Main.css [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainTablet.css [36m304 [90m1ms[0m
+[90mGET /stylesheets/MainMobile.css [36m304 [90m0ms[0m
+[90mGET /images/UniversityLogo.jpg [36m304 [90m3ms[0m
+[90mGET /images/BlexField5.jpg [36m304 [90m0ms[0m

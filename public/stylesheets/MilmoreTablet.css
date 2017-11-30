@@ -1,0 +1,16 @@
+body{
+	background: url("../Pictures/Milmore10.jpg") repeat scroll 0 0 transparent;
+	background-size: cover;
+	font-family: Times New Roman;
+	 font-style: italic;
+}
+.body{
+	background-color: #E386DB;
+}
+.footer{
+	background-color: #E3FCF8;
+}
+.select{
+	background-color: #AEA0D9;
+}
+	
